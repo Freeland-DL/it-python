@@ -48,3 +48,5 @@ while response == "Y":
         pass
     elif response == "N":
         print("Thank you for using the Newaygo County zip code sorter. Goodbye!")
+    else:
+        print("Did you mean no..?")
