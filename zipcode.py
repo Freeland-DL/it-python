@@ -18,31 +18,31 @@ while response == "Y":
     zipcode = input("Please enter a zip code: ")
     print("")
     if zipcode == "49412":
-        print(f"The zipcode {zipcode} is for Fremont")
+        print(f"The zip code {zipcode} is for Fremont")
         print("")
     elif zipcode == "49309":
-        print(f"The zipcode {zipcode} is for Bitely")
+        print(f"The zip code {zipcode} is for Bitely")
         print("")
     elif zipcode == "49312":
-        print(f"The zipcode {zipcode} is for Brohman")
+        print(f"The zip code {zipcode} is for Brohman")
         print("")
     elif zipcode == "49337":
-        print(f"The zipcode {zipcode} is for Croton and Newaygo")
+        print(f"The zip code {zipcode} is for Croton and Newaygo")
         print("")
     elif zipcode == "49413":
-        print(f"The zipcode {zipcode} is for Fremont")
+        print(f"The zip code {zipcode} is for Fremont")
         print("")
     elif zipcode == "49327":
-        print(f"The zipcode {zipcode} is for Grant")
+        print(f"The zip code {zipcode} is for Grant")
         print("")
     elif zipcode == "49349":
-        print(f"The zipcode {zipcode} is for White Cloud")
+        print(f"The zip code {zipcode} is for White Cloud")
         print("")
     else:
-        print(f"The zipcode {zipcode} is not in Newaygo County.")
+        print(f"The zip code {zipcode} is not in Newaygo County.")
         print("")
 
-    response = input("Would you like to try again? [Y/N] ")
+    response = input("Would you like to enter another zip code? [Y/N] ")
     print("")
     if response == "Y":
         pass
