@@ -7,11 +7,11 @@ def main():
     run_event_loop()
 
 def run_event_loop():
-    filename = "default"
+    filename = input("What file would you like to load? ")
     journal_data = journal.load(filename)  # []
 
     while True:
-        command = input("[L]ist entries, [A]dd an entry, E[x]it: ")
+        command = input("[L]ist entries, [A]dd an entry, E[x]it, [D]elete a file: ")
         print("")
 
         if command.upper() == "L":
@@ -22,6 +22,8 @@ def run_event_loop():
             print("")
         elif command.upper() == "X":
             break
+        elif command.upper() == "D":
+            print("")
         else:
             print("Sorry, that wasn't an avaliable command")
             print("")
