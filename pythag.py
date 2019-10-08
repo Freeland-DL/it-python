@@ -9,11 +9,17 @@ banner("PYTHAGOREAN CALCULATOR", "Collin Freeland")
 # 4. Ask the user if they would like to solve another problem.
 # __name__ == "__main__"
 
-print("Welcome to The Pythagorean Calculator! We will help you find the missing side of a right triangle. The lengths of the two legs are 'a' and 'b', and the length of the hypotenuse is 'c'.")
+print("Welcome to the Pythagorean Calculator! We will help you find the missing side of a right triangle. The lengths of the two legs are 'a' and 'b', and the length of the hypotenuse is 'c'.")
+
+def error_one():
+    print("There must be at least one missing variable in your input\n")
+
+def error_two():
+    print("You must input at least two variables for us to work!\n")
 
 try_again = "Y"
 
-while try_again == "Y":
+while try_again.upper() == "Y":
 
     print("")
     print("Please enter the length of each side, or leave it blank if you don't know.")
@@ -22,13 +28,23 @@ while try_again == "Y":
     b = input("b = ")
     c = input("c = ")
 
+    if a == "" and b == "":
+        error_two()
 
-    if a == "":
+    elif a == "" and c == "":
+        error_two()
+
+    elif c == "" and b == "":
+        error_two()
+
+    elif a != "" and b != "" and c != "":
+        error_one()
+
+    elif a == "":
         b = float(b)
         c = float(c)
         input_a = math.sqrt((c*c) - (b*b))
         print(f"Your missing side is a, and it's length is {input_a}\n")
-
 
     elif b == "":
         c = float(c)
@@ -44,9 +60,9 @@ while try_again == "Y":
 
 
     try_again = input("Would you like to try again? [Y/N] ")
-    if try_again == "Y":
+    if try_again.upper() == "Y":
         pass
-    elif try_again == "N":
+    elif try_again.upper() == "N":
         print('')
         print("Thank you for using the Pythagorean Calculator.")
     else:
