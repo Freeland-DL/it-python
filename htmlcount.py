@@ -26,7 +26,7 @@ def html_tag_counter(text):
     previous_char = None
     for char in text:
         if char != "/" and previous_char == "<":
-            tag_count +=1
+            tag_count += 1
         previous_char = char
     return tag_count
 

@@ -69,7 +69,7 @@ while response == "Y":
 
 
     response = input("Would you like to try again? [Y/N] ")
-    if response == "Y":
+    if response.upper() == "Y":
         pass
     elif response == "N":
         print('')
